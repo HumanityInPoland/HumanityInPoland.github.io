@@ -1,9 +1,3 @@
-
-//    font-family: 'Roboto Slab', serif;
-
-//    font-family: 'Raleway', sans-serif;
-
-
 body
 {
 	background-color: #666666;
@@ -26,4 +20,6 @@ body
 	margin-right: auto;
 	font-size: 30px;
 	font-family: 'Roboto Slab', serif;
+	//    font-family: 'Roboto Slab', serif;
+	//    font-family: 'Raleway', sans-serif;
 }
