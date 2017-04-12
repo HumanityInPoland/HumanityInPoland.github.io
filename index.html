@@ -25,8 +25,13 @@
 			var day = d.getDate();
 			var m = d.getMonth();
 			var y = d.getFullYear();
-			
-			document.getElementById("time").innerHTML = h+":"+mins+":"+s+" "+day+"/"+m+"/"+y;
+			if(mins<10){
+				document.getElementById("time").innerHTML = h+":"+mins+"0:"+s+" "+day+"/"+m+"/"+y;
+			}
+			else
+			{
+				document.getElementById("time").innerHTML = h+":"+mins+":"+s+" "+day+"/"+m+"/"+y;
+			}
 			
 			setTimeout("time()", 1000);
 		}
