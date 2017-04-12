@@ -17,21 +17,23 @@
 	<link href="https://fonts.googleapis.com/css?family=Concert+One&amp;subset=latin-ext" rel="stylesheet">
 	<!-- JS -->
 	<script type="text/javascript">
+		function addZero(number){
+			if(number<10){
+				return "0"+number;
+			}
+		}
 		function time(){
 			var d = new Date();
 			var h = d.getHours() + 1;
+			h = addZero(h);
 			var mins = d.getMinutes();
+			mins = addZero(mins);
 			var s = d.getSeconds();
+			s = addZero(s);
 			var day = d.getDate();
 			var m = d.getMonth();
 			var y = d.getFullYear();
-			if(mins<10){
-				document.getElementById("time").innerHTML = h+":"+mins+"0:"+s+" "+day+"/"+m+"/"+y;
-			}
-			else
-			{
-				document.getElementById("time").innerHTML = h+":"+mins+":"+s+" "+day+"/"+m+"/"+y;
-			}
+			document.getElementById("time").innerHTML = h+":"+mins+":"+s+" "+day+"/"+m+"/"+y;
 			
 			setTimeout("time()", 1000);
 		}
