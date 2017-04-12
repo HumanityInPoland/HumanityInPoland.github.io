@@ -3,6 +3,7 @@ body {
   color: white;
 }
 #left {
+  padding-top: 50px;
   float:left;
 }
 #container {
