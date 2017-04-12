@@ -27,9 +27,10 @@
 			var y = d.getFullYear();
 			
 			document.getElementById("time").innerHTML = h+":"+mins+":"+s+" "+day+"/"+m+"/"+y;
+			
+			setTimeout("time()", 1000);
 		}
-		
-		setTimeout("time()", 1000);
+		time();
 	</script>
 </head>
 <!-- Body declaration -->
