@@ -17,13 +17,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Concert+One&amp;subset=latin-ext" rel="stylesheet">
 	<!-- JS -->
 	<script type="text/javascript">
-		var d = new Date();
-		var h = d.getHours() + 1;
-		var mins = d.getMinutes();
-		var s = d.getSeconds();
-		var day = d.getDate();
-		var m = d.getMonth();
-		var y = d.getFullYear();
+		function time(){
+			var d = new Date();
+			var h = d.getHours() + 1;
+			var mins = d.getMinutes();
+			var s = d.getSeconds();
+			var day = d.getDate();
+			var m = d.getMonth();
+			var y = d.getFullYear();
+			
+			document.getElementById("time").innerHTML = h+":"+mins+":"+s+" "+day+"/"+m+"/"+y;
+			
+			setTimeout("time()", 1000);
+		}
 	</script>
 </head>
 <!-- Body declaration -->
@@ -31,7 +37,7 @@
 	<div id="container">
 		<div id="logo">HumanityInPoland</div>
 		<div id="time"></div>
-		<script type="text/javascript">document.getElementById("time").innerHTML = h+"."+mins+"."+s+" "+day+"."+m+"."+y;</script>
+		<script type="text/javascript">document.getElementById("time").innerHTML = h+":"+mins+":"+s+" "+day+"/"+m+"/"+y;</script>
 		<div id="left"><iframe src="https://discordapp.com/widget?id=301068398249508865&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe></div>
 	</div>
 </body>
