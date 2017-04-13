@@ -29,7 +29,7 @@
 		}
 		function time(){
 			var d = new Date();
-			var h = d.getHours() + 1;
+			var h = d.getHours();
 			h = addZero(h);
 			var mins = d.getMinutes();
 			mins = addZero(mins);
@@ -37,6 +37,7 @@
 			s = addZero(s);
 			var day = d.getDate();
 			var m = d.getMonth();
+			m = addZero(m);
 			var y = d.getFullYear();
 			document.getElementById("time").innerHTML = h+":"+mins+":"+s+" "+day+"/"+m+"/"+y;
 			
