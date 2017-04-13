@@ -36,7 +36,7 @@
 			var s = d.getSeconds();
 			s = addZero(s);
 			var day = d.getDate();
-			var m = d.getMonth();
+			var m = d.getMonth() + 1;
 			m = addZero(m);
 			var y = d.getFullYear();
 			document.getElementById("time").innerHTML = h+":"+mins+":"+s+" "+day+"/"+m+"/"+y;
